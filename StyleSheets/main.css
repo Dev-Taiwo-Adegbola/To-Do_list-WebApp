@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  overflow-y: hidden;
+}
+
+main .desktopimg {
+  display: none;
+  height: 100svh;
+  width: 70vw;
+}
+.desktopimg img {
+  height: 100%;
+  width: 100%;
+}
+
+#startPage,
+#loginPage {
+  background: aliceblue;
+  padding-top: 3%;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main_logo {
+  width: 260px;
+}
+
+#startPage .startButton,
+.loginButton {
+  background-color: #145b9e;
+  color: #fff;
+  font-size: 1em;
+  width: 200px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  visibility: visible;
+}
+
+#startPage .slides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: min(90%, 400px);
+  height: 150px;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 2px solid #145b9e;
+  color: #145b9e;
+  font-size: 0.9em;
+  background-color: #ffffffe8;
+}
+
+.slides_wrapper {
+  display: flex;
+  /* border: 1px solid red; */
+  width: min(100%, 400px);
+  overflow: hidden;
+}
+
+.slides_wrapper .slide {
+  /* position: absolute; */
+  text-align: center;
+  opacity: 0;
+  /* transform: translateX(400px); */
+  min-width: min(100%, 400px);
+  transition: transform 1s;
+}
+
+.slides_wrapper .show {
+  opacity: 1;
+  /* transform: translateX(0px); */
+
+  /* animation: show 0.5s linear forwards; */
+}
+
+.button_wrapper {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+.button_wrapper button {
+  width: 22px;
+  border: none;
+  background-color: transparent;
+}
+
+.button_wrapper button svg {
+  fill: #145b9e;
+}
+
+#startPage .slides .dots_wrapper {
+  display: flex;
+  gap: 20px;
+}
+#startPage .slides .dots_wrapper .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #145b9e81;
+}
+
+#startPage .slides .dots_wrapper .active {
+  width: 7px;
+  height: 7px;
+  background-color: #145b9e;
+}
+
+.toggleBtn {
+  width: 50px;
+  height: 25px;
+  border-radius: 30px;
+  background-color: #173046;
+}
+.toggle {
+  width: 22px;
+  height: 22px;
+  border-radius: 30px;
+  background: url("/img/moon-stars.svg");
+  background-position: center;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  margin: 1.5px;
+}
+
+.footer {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
+/* login page */
+/* login page */
+/* login page */
+.prevPage,
+.backToLogin {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.prevPage svg,
+.backToLogin svg {
+  fill: #145b9e;
+  width: 30px;
+}
+
+.loginButton {
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.loginButton svg,
+.signUpBtn svg {
+  width: 20px;
+  fill: aliceblue;
+}
+
+.signUpBtn {
+  display: block;
+  font-size: 0.8em;
+  width: 150px;
+  height: 35px;
+}
+
+.signUpText,
+#signUpForm p {
+  text-align: center;
+}
+.blurLayer {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f8ff5d;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  display: none;
+}
+
+#signUpForm .main_logo {
+  width: 120px;
+}
+
+#signUpForm {
+  position: absolute;
+  top: 30px;
+  padding-top: 20px;
+  background-color: #fff;
+  width: min(80%, 400px);
+  height: 90vh;
+  border-radius: 20px;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+/* .toggleSignUpForm {
+  display: flex;
+} */
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 250px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #145b9e;
+  margin: 15px 0;
+  padding: 5px;
+  background: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background: #fff;
+}
+
+input[type="checkbox"] {
+  margin-top: 25px;
+}
+
+label {
+  color: #145b9e;
+  font-size: 0.9em;
+}
+
+@media (min-width: 1000px) {
+  main .desktopimg {
+    display: block;
+  }
+}
