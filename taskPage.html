@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/iDo_log.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/StyleSheets/main.css" />
+    <title>iDo task manager</title>
+  </head>
+  <body>
+    <main>
+      <div class="desktopimg">
+        <img src="/img/bg.jpg" alt="" />
+      </div>
+      <div id="taskPage">
+        <header>
+          <img
+            class="main_logo"
+            src="/img/iDo_log.png"
+            alt="iDo task manager logo"
+          />
+          <div class="user"></div>
+        </header>
+
+        <section class="label">
+          <h1>Dear Olas,</h1>
+          <p>Welcome to iDo, Click the + button to add Task</p>
+        </section>
+
+        <section class="taskSection"></section>
+        <div class="taskBlurCOntainer"></div>
+        <section class="addtaskSection">
+          <h2>ADD TASK</h2>
+          <form action="">
+            <input type="text" placeholder="Task Title" /><br />
+            <input type="text" placeholder="Task Description" /><br />
+            <select name="task" id="task">
+              <option value="">select Task importance</option>
+              <option value="veryImportant">very Important</option>
+              <option value="fairlyImportant">fairly Important</option>
+              <option value="Regular">Regular</option></select
+            ><br />
+            <button type="submit" class="createTaskBtn">Add task</button>
+          </form>
+        </section>
+
+        <button class="addTaskBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M240 64c0-8.8-7.2-16-16-16s-16 7.2-16 16V240H32c-8.8 0-16 7.2-16 16s7.2 16 16 16H208V448c0 8.8 7.2 16 16 16s16-7.2 16-16V272H416c8.8 0 16-7.2 16-16s-7.2-16-16-16H240V64z"
+            />
+          </svg>
+        </button>
+        <footer class="footer">
+          <div class="toggleBtn">
+            <div class="toggle"></div>
+          </div>
+          <small>Copyright &copy;</small>
+        </footer>
+      </div>
+    </main>
+
+    <script src="/Scripts/script.js"></script>
+  </body>
+</html>

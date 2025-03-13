@@ -38,6 +38,32 @@ if (document.querySelector("#loginPage .signUpBtn")) {
   });
 }
 
+const addtaskSection = document.querySelector(".addtaskSection");
+const taskBlurCOntainer = document.querySelector(".taskBlurCOntainer");
+
+// let taskArr = new Map([]);
+if (document.querySelector(".addTaskBtn")) {
+  document.querySelector(".addTaskBtn").onclick = (e) => {
+    e.preventDefault();
+    addtaskSection.style.display = "block";
+    taskBlurCOntainer.style.display = "block";
+  };
+  taskBlurCOntainer.onclick = () => {
+    addtaskSection.style.display = "none";
+    taskBlurCOntainer.style.display = "none";
+  };
+}
+
+if (document.querySelector(".createTaskBtn")) {
+  document.querySelector(".createTaskBtn").onclick = (e) => {
+    e.preventDefault();
+    document.querySelector(".label h1").textContent = "TODAY";
+    document.querySelector(".label p").textContent = `${
+      new Date().getMonth() + 1
+    }/${new Date().getDate()}/${new Date().getFullYear()}`;
+  };
+}
+
 const slides = document.querySelectorAll(".slides_wrapper .slide");
 
 let currentSlide = 0;
