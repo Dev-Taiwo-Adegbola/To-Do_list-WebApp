@@ -191,12 +191,14 @@ main .desktopimg {
   text-align: center;
 }
 .blurLayer,
-.taskBlurCOntainer {
+.taskBlurCOntainer,
+.SuccessfulSignupBlur {
   width: 100%;
   height: 100vh;
   background-color: #f0f8ff5d;
   backdrop-filter: blur(10px);
   position: fixed;
+  top: 0;
   display: none;
 }
 
@@ -215,6 +217,7 @@ main .desktopimg {
   align-items: center;
   flex-direction: column;
   display: none;
+  z-index: 9;
 }
 
 /* .toggleSignUpForm {
@@ -325,7 +328,11 @@ header .user {
   align-items: center;
   display: none;
 }
-
+.SuccessfulSignup {
+  line-height: 40px;
+  color: #145b9e;
+  height: 300px;
+}
 .addtaskSection input[type="text"],
 .addtaskSection input[type="password"],
 .addtaskSection select,

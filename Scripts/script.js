@@ -38,8 +38,76 @@ if (document.querySelector("#loginPage .signUpBtn")) {
   });
 }
 
+// User login details management using localStorage
+const fullName = document.getElementById("FullName");
+const userName = document.getElementById("userName");
+const userEmail = document.getElementById("userEmail");
+const userPassword = document.getElementById("userPassword");
+const userConfirmPass = document.getElementById("userConfirmPass");
+const gender = document.getElementsByName("gender");
+const signUpBtn = document.querySelector("#signUpForm .signUpBtn");
+
+const SuccessfulSignup = document.querySelector(".SuccessfulSignup");
+const SuccessfulLogin = document.querySelector(".SuccessfulLogin");
+
+if (signUpBtn) {
+  signUpBtn.onclick = (e) => {
+    localStorage.setItem("fullName", fullName.value);
+    localStorage.setItem("userName", userName.value);
+    localStorage.setItem("userEmail", userEmail.value);
+    localStorage.setItem("userPassword", userPassword.value);
+    localStorage.setItem("userConfirmPass", userConfirmPass.value);
+
+    const SuccessfulSignupBlur = document.querySelector(
+      ".SuccessfulSignupBlur"
+    );
+    SuccessfulSignup.style.display = "flex";
+    SuccessfulSignupBlur.style.display = "block";
+  };
+}
+
+if (SuccessfulLogin) {
+  SuccessfulLogin.onclick = () => (window.location.href = "/loginPage.html");
+}
+
+console.log(localStorage);
+
+// manage User login
+
+const loginUsernameEmail = document.getElementById("usernameEmail");
+const loginPassword = document.getElementById("loginPassword");
+
+const loginButton = document.querySelector(".loginButton");
+
+if (loginButton) {
+  loginButton.onclick = (e) => {
+    e.preventDefault();
+    // alert("hi");
+    const userName = localStorage.getItem("userName");
+    const userEmail = localStorage.getItem("userEmail");
+    const userpass = localStorage.getItem("userPassword");
+
+    if (
+      (userName === loginUsernameEmail.value ||
+        userEmail === loginUsernameEmail.value) &&
+      userpass === loginPassword.value
+    ) {
+      // console.log(userEmail, userName, userpass);
+      window.location.href = "/taskPage.html";
+    }
+  };
+}
+
+// task page with users details
+const userLabel = document.querySelector(".label h1");
+
+const userFullName = localStorage.getItem("fullName");
+const userFirstName = userFullName.slice(0, userFullName.indexOf(" ") + 1);
+
 const addtaskSection = document.querySelector(".addtaskSection");
 const taskBlurCOntainer = document.querySelector(".taskBlurCOntainer");
+
+userLabel.textContent = `Dear ${userFirstName}`;
 
 // let taskArr = new Map([]);
 if (document.querySelector(".addTaskBtn")) {
@@ -57,7 +125,7 @@ if (document.querySelector(".addTaskBtn")) {
 if (document.querySelector(".createTaskBtn")) {
   document.querySelector(".createTaskBtn").onclick = (e) => {
     e.preventDefault();
-    document.querySelector(".label h1").textContent = "TODAY";
+    userLabel.textContent = "TODAY";
     document.querySelector(".label p").textContent = `${
       new Date().getMonth() + 1
     }/${new Date().getDate()}/${new Date().getFullYear()}`;

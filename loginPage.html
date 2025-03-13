@@ -27,8 +27,8 @@
           alt="iDo task manager logo"
         />
         <form action="" method="get">
-          <input type="text" placeholder="Enter username/email" /><br />
-          <input type="password" placeholder="Enter password" /><br />
+          <input id="usernameEmail" type="text" placeholder="Enter username/email" /><br />
+          <input id="loginPassword" type="password" placeholder="Enter password" /><br />
           <input type="checkbox" id="stayIn" />
           <label for="stayIn"> Remember me</label>
           <button class="loginButton">
@@ -69,14 +69,31 @@
             alt="iDo task manager logo"
           />
           <form action="" method="get">
-            <input type="text" placeholder="Enter your FullName" /><br />
-            <input type="text" placeholder="Create username" /><br />
+            <input
+              type="text"
+              id="FullName"
+              placeholder="Enter your FullName"
+            /><br />
+            <input
+              type="text"
+              id="userName"
+              placeholder="Create username"
+            /><br />
             <input
               type="email"
+              id="userEmail"
               placeholder="Enter email (example@iDo.com)"
             /><br />
-            <input type="password" placeholder="Enter password" /><br />
-            <input type="password" placeholder="Confirm password" /><br />
+            <input
+              type="password"
+              id="userPassword"
+              placeholder="Enter password"
+            /><br />
+            <input
+              type="password"
+              id="userConfirmPass"
+              placeholder="Confirm password"
+            /><br />
             <input type="radio" id="male" name="gender" />
             <label for="male"> Male</label>
             <input type="radio" id="female" name="gender" />
@@ -95,6 +112,23 @@
               <span class="backToLoginG">Back to login</span>
             </p>
           </form>
+
+          <div class="SuccessfulSignupBlur"></div>
+
+          <section class="addtaskSection SuccessfulSignup">
+            <h2>Thank you for choosing iDo</h2>
+            <p>Registration Successful, continue with Login </p>
+            <button class="loginButton SuccessfulLogin">
+              login
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M507.3 267.3c6.2-6.2 6.2-16.4 0-22.6l-144-144c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L457.4 240 16 240c-8.8 0-16 7.2-16 16s7.2 16 16 16l441.4 0L340.7 388.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l144-144z"
+                />
+              </svg>
+          </section>
+
+
         </div>
         <footer class="footer">
           <div class="toggleBtn">
