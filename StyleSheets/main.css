@@ -291,6 +291,66 @@ header .user {
   width: 100%;
   height: 52%;
   padding: 3% 5% 0;
+  overflow: scroll;
+}
+.taskWrapper {
+  width: 100%;
+  height: fit-content;
+  background-color: #145b9e48;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 3px solid #145b9e;
+  border-radius: 7px;
+}
+.taskWrapper > .taskDetails {
+  line-height: 25px;
+}
+.taskWrapper > .taskDetails > p > span {
+  font-size: 15px;
+}
+
+.taskWrapper .taskActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  background-position: calc();
+}
+
+.taskActions .taskEditBtn,
+.taskActions .taskDeleteBtn {
+  width: 25px;
+  height: 27px;
+  padding: 3px;
+  border: 1px solid #145b9e;
+  border: 1px solid #aaadafa6;
+  border-radius: 3px;
+  background: 0;
+  fill: #145b9e;
+  margin: 0 -20px;
+}
+
+.taskActions p {
+  width: 115px;
+  margin: 0;
+}
+
+.taskCompleteStatusBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 30px;
+  border: none;
+  background-color: #145b9e;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.taskCompleteStatusBtn svg {
+  width: 15px;
+  fill: aliceblue;
+  margin-left: 5px;
 }
 
 #taskPage .addTaskBtn {

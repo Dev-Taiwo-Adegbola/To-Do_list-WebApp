@@ -26,6 +26,7 @@
           src="/img/iDo_log.png"
           alt="iDo task manager logo"
         />
+        <label id="errorContain"></label>
         <form action="" method="get">
           <input id="usernameEmail" type="text" placeholder="Enter username/email" /><br />
           <input id="loginPassword" type="password" placeholder="Enter password" /><br />
@@ -84,6 +85,11 @@
               id="userEmail"
               placeholder="Enter email (example@iDo.com)"
             /><br />
+            Gender:
+            <input type="radio" id="male" name="gender" />
+            <label for="male"> Male</label>
+            <input type="radio" id="female" name="gender" />
+            <label for="female"> Female</label><br>
             <input
               type="password"
               id="userPassword"
@@ -94,10 +100,7 @@
               id="userConfirmPass"
               placeholder="Confirm password"
             /><br />
-            <input type="radio" id="male" name="gender" />
-            <label for="male"> Male</label>
-            <input type="radio" id="female" name="gender" />
-            <label for="female"> Female</label>
+            <br>
             <button type="button" class="loginButton signUpBtn">
               Sign Up
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
