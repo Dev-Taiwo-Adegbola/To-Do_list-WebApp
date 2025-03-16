@@ -314,7 +314,6 @@ header .user {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  background-position: calc();
 }
 
 .taskActions .taskEditBtn,
@@ -322,29 +321,45 @@ header .user {
   width: 25px;
   height: 27px;
   padding: 3px;
-  border: 1px solid #145b9e;
-  border: 1px solid #aaadafa6;
+  border: 1px solid #145b9e70;
   border-radius: 3px;
   background: 0;
   fill: #145b9e;
-  margin: 0 -20px;
+  /* margin: 0 -20px; */
+}
+
+.taskActions .taskDeleteBtn {
+  border: 1px solid #a52a2a69;
+
+  fill: #a52a2a;
+  /* margin: 0 -20px; */
 }
 
 .taskActions p {
-  width: 115px;
+  width: max-content;
+  height: 15px;
+  display: flex;
+  gap: 3px;
   margin: 0;
+}
+
+.taskActions p svg {
+  width: 15px;
+  fill: #145b9e;
+  margin: 0 3px;
 }
 
 .taskCompleteStatusBtn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
+  width: 140px;
   height: 30px;
   border: none;
   background-color: #145b9e;
   color: aliceblue;
   font-weight: 500;
+  /* font-size: 0.75em; */
 }
 
 .taskCompleteStatusBtn svg {
@@ -377,11 +392,11 @@ header .user {
   top: 50%;
   transform: translateY(-50%);
   width: 85%;
-  height: 400px;
+  height: max-content;
   background-color: aliceblue;
   box-shadow: 0 0 4px #05284985;
   border-radius: 20px;
-  padding: 10px;
+  padding: 35px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
